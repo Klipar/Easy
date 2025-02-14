@@ -3,7 +3,6 @@
 
 **Easy** - a simple Python library with useful functions to ease your work!
 
-## Badges
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-blue?logo=python)
 

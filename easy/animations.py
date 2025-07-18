@@ -1,4 +1,4 @@
-class SimpleAnimation:      # / 
+class SimpleAnimation:      # /
     def __init__(self):
         self.char = '|'
 
@@ -28,15 +28,14 @@ class LineProgresBar:       # test [=======--------->] [45%] [130/500]
         self.maxWalue  = maxWalue
 
         self.text   = text
-        
+
         self.isShowPersent = isShowPersent
         self.isShowWalue   = isShowWalue
 
     def ShoveAndUpdate (self, dif_in_walue = 1):
         self.curentWalue += dif_in_walue
         x = int(((self.curentWalue*self.MaxLength)/self.maxWalue))
-        
-        
+
         print(self.text,"[", end="")
 
         for i in range(x):

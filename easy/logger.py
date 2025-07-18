@@ -30,7 +30,8 @@ class Logger:
         logger.success("This is a success message.")   # Will log
         logger.warn("This is a warning message.")      # Will not log, as logLevel < funcLogLevel
     """
-    def __init__(self, logLevel: int, **kwargs):
+
+    def __init__(self, logLevel: int = float('inf'), **kwargs):
         """
         Initializes the Logger with a specified log level and optional custom log levels.
 
@@ -53,3 +54,10 @@ class Logger:
             return None
 
         return logFunction.__get__(self)
+
+    def getLogLevel(self) -> int:
+        return self.logLevel
+
+    def setLogLevel(self, LogLevel: int) -> None:
+        if isinstance(LogLevel, int):
+            self.logLevel = LogLevel

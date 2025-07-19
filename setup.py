@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='easy',
-    version='1.0',
+    version='2.0',
     packages=find_packages(),
     description='A simple library with useful functions to ease your work.',
     author='Klipar',

@@ -5,24 +5,24 @@ inform ("Launch the system")
 sleep(1)
 warn ("Uninstalled modules found, start downloading...")
 sleep(1)
-bar = LineProgresBar(MaxLength = 50,            # bar line length
+bar = LineProgressBar(MaxLength = 50,            # bar line length
                          text = "Loading ",     # text before the bar
-                         maxWalue = 200,        # number of iterations up to 100%
-                         isShowPersent = True,  # show percentages
-                         isShowWalue = True)    # show values 
+                         maxValue = 200,        # number of iterations up to 100%
+                         isShowPercent = True,  # show percentages
+                         isShowValue = True)    # show values
 for i in range (200):
-    bar.ShoveAndUpdate(dif_in_walue = 1)        # dif_in_walue - means the step size, standard = 1
+    bar.ShoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
     sleep (0.01)
 success("All modules are downloaded successfully!")
 inform ("check the installed modules...")
 
-bar = LineProgresBar(MaxLength = 50,                # bar line length
+bar = LineProgressBar(MaxLength = 50,                # bar line length
                          text = "Check the hash ",  # text before the bar
-                         maxWalue = 100,            # number of iterations up to 100%
-                         isShowPersent = True,      # show percentages
-                         isShowWalue = False)        # show values 
+                         maxValue = 100,            # number of iterations up to 100%
+                         isShowPercent = True,      # show percentages
+                         isShowValue = False)        # show values
 for i in range (100):
-    bar.ShoveAndUpdate(dif_in_walue = 1)        # dif_in_walue - means the step size, standard = 1
+    bar.ShoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
     sleep (0.05)
     if i == 75:
         failed("The hashes do not match!", st = "\n")

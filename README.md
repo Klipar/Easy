@@ -26,7 +26,7 @@ You can install the **Easy** library directly from GitHub using `pip`. Follow th
 ## Usage/Examples
 #### Line bar
 ```Python
-bar = LineProgresBar(MaxLength = 50,            # bar line length
+bar = LineProgressBar(MaxLength = 50,            # bar line length
                          text = "Loading ",     # text before the bar
                          maxWalue = 200,        # number of iterations up to 100%
                          isShowPersent = True,  # show percentages

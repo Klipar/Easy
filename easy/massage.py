@@ -19,29 +19,29 @@ class colors:
     WHITEBG  = '\33[47m'
     END      = '\33[0m'
 
-def Beautiful_Timestump () -> str:
+def Beautiful_Timestamp () -> str:
     return datetime.datetime.now().strftime("[%H:%M:%S]")
 
 def failed(str, st = "", en = "\n"):
-    print(st + Beautiful_Timestump (), colors.RED + ' [FAILED]  ' + colors.END, str, end = en)
-    return (f"{Beautiful_Timestump ()} [FAILED] {str}")
+    print(st + Beautiful_Timestamp (), colors.RED + ' [FAILED]  ' + colors.END, str, end = en)
+    return (f"{Beautiful_Timestamp ()} [FAILED] {str}")
 
 def success (str, st = "", en = "\n"):
-    print(st + Beautiful_Timestump (), colors.GREEN + ' [SUCCESS] ' + colors.END, str, end = en)
-    return (f"{Beautiful_Timestump ()} [SUCCESS] {str}")
+    print(st + Beautiful_Timestamp (), colors.GREEN + ' [SUCCESS] ' + colors.END, str, end = en)
+    return (f"{Beautiful_Timestamp ()} [SUCCESS] {str}")
 
 def inform(str, st = "", en = "\n"):
-    print(st + Beautiful_Timestump (), colors.BLUE + ' [INFORM]  ' + colors.END, str, end = en)
-    return (f"{Beautiful_Timestump ()} [INFORM] {str}")
+    print(st + Beautiful_Timestamp (), colors.BLUE + ' [INFORM]  ' + colors.END, str, end = en)
+    return (f"{Beautiful_Timestamp ()} [INFORM] {str}")
 
 def warn(str, st = "", en = "\n"):
-    print(st + Beautiful_Timestump (), colors.YELLOW + ' [ WARN ]  ' + colors.END, str, end = en)
-    return (f"{Beautiful_Timestump ()} [WARN] {str}")
+    print(st + Beautiful_Timestamp (), colors.YELLOW + ' [ WARN ]  ' + colors.END, str, end = en)
+    return (f"{Beautiful_Timestamp ()} [WARN] {str}")
 
 def pr(str, st = "", en = "\n"):
-    print(st + Beautiful_Timestump (),' [PRINT]   ' , str)
-    return (f"{Beautiful_Timestump ()} [PRINT] {str}")
+    print(st + Beautiful_Timestamp (),' [PRINT]   ' , str)
+    return (f"{Beautiful_Timestamp ()} [PRINT] {str}")
 
 def test(str, st = "", en = "\n"):
-    print(st + colors.VIOLET + f"{Beautiful_Timestump ()}  [ TEST ]  " + colors.END, str, end = en)
-    return (f"{Beautiful_Timestump ()} [TEST] {str}")
+    print(st + colors.VIOLET + f"{Beautiful_Timestamp ()}  [ TEST ]  " + colors.END, str, end = en)
+    return (f"{Beautiful_Timestamp ()} [TEST] {str}")

@@ -1,4 +1,4 @@
-from massage import *
+from easy.message import *
 
 # Default log levels for various logging functions.
 # The keys represent the logging functions,

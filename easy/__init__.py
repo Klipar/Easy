@@ -1,3 +1,3 @@
 from .animations import *
-from .massage import *
+from .message import *
 from .logger import *

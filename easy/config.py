@@ -23,6 +23,7 @@ class Config:
                  configVersion: str = None,
                  configVersionParameterName: str = "configVersion",
                  onFailedToLoadConfig: Callable = None,
+                 onConfigChanged: Callable = None,
                  configTemplate: Dict = None,
                  configTemplatePath: str = None):
         """
@@ -41,6 +42,7 @@ class Config:
         self.configPath: str = configPath
         self.configVersion: str = configVersion
         self.configVersionParameterName = configVersionParameterName
+        self.onConfigChanged = onConfigChanged
 
         self.configTemplate = configTemplate
         self.configTemplatePath = configTemplatePath if configTemplatePath else "templateConfig.json"
@@ -108,6 +110,9 @@ class Config:
                 self.config = tmpConfig
 
                 self.logger.warn("Config was changed!")
+                if self.onConfigChanged:
+                    self.onConfigChanged()
+
         else:
             self.logger.inform("Config wasn't changed, versions not matched.")
 

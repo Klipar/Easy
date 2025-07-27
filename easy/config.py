@@ -1,6 +1,6 @@
 from easy.message import *
 from easy.logger import Logger
-from typing import Union, Dict, Any, Callable
+from typing import Optional, Union, Dict, Any, Callable
 import json
 import os
 
@@ -163,7 +163,7 @@ class Config:
         except Exception as e:
             self.logger.failed(f"Can't open config file: {e}")
 
-    def getValue(self, *args: str, config: Union[Dict[str, Any], None] = None) -> Any:
+    def getValue(self, *args: str, config: Union[Dict[str, Any], None] = None, parsBoolValues: bool = True) -> Any:
         """
         Retrieves a value from the configuration based on the provided keys.
 
@@ -186,5 +186,17 @@ class Config:
         except Exception as e:
             failed(f"ERROR while reading config: {e}")
             return None
-
+        if parsBoolValues:
+            value = self.parseBool(value)
         return value
+
+    @classmethod
+    def parseBool(cls, data: Any) -> Optional[bool]:
+        """Return bool value parsed from input if possible. If not, return the original data."""
+        if isinstance(data, str):
+            if data.lower() == "true":
+                return True
+            elif data.lower() == "false":
+                return False
+
+        return data

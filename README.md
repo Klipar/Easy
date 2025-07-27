@@ -32,7 +32,7 @@ bar = LineProgressBar(MaxLength = 50,            # bar line length
                          isShowPersent = True,  # show percentages
                          isShowWalue = True)    # show values 
 for i in range (200):
-    bar.ShoveAndUpdate(dif_in_walue = 1)        # dif_in_walue - means the step size, standard = 1
+    bar.shoveAndUpdate(dif_in_walue = 1)        # dif_in_walue - means the step size, standard = 1
     sleep (0.01)
 ```
 #### Simple animation

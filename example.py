@@ -11,7 +11,7 @@ bar = LineProgressBar(MaxLength = 50,            # bar line length
                          isShowPercent = True,  # show percentages
                          isShowValue = True)    # show values
 for i in range (200):
-    bar.ShoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
+    bar.shoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
     sleep (0.01)
 success("All modules are downloaded successfully!")
 inform ("check the installed modules...")
@@ -22,7 +22,7 @@ bar = LineProgressBar(MaxLength = 50,                # bar line length
                          isShowPercent = True,      # show percentages
                          isShowValue = False)        # show values
 for i in range (100):
-    bar.ShoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
+    bar.shoveAndUpdate(difInValue = 1)        # dif_in_walue - means the step size, standard = 1
     sleep (0.05)
     if i == 75:
         failed("The hashes do not match!", st = "\n")

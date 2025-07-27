@@ -78,7 +78,7 @@ class LineProgressBar:
         self.isShowPercent = isShowPercent
         self.isShowValue = isShowValue
 
-    def ShoveAndUpdate(self, difInValue: int = 1):
+    def shoveAndUpdate(self, difInValue: int = 1):
         """
         Updates the current value of the progress bar and displays the updated progress.
 
